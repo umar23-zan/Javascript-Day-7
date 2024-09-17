@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Advanced functions
+    </title>
+  </head>
+  <body>
+    <script>
+      /*
+      const multiply = (a,b) => a*b;
+      console.log(multiply(2,3));
+      console.log(multiply(7,10));
+      */
+     function addNum(array,num){
+      return array.map((value) => value+num);
+     };
+     console.log(addNum([1,2,3],2));
+
+     function countPositive(num){
+      let positiveNumber=0;
+      num.forEach((num) =>{
+        if (num>0)
+        positiveNumber++;
+      });
+      return positiveNumber;
+     }
+     console.log(countPositive([1,2,3,-5]));
+
+     function removeEgg(foods){
+      let remove=0;
+      return foods.filter((foods) => {
+        if(foods==='egg' && remove<2){
+          remove++;
+          return false;
+        }
+        return true;
+      });
+     }
+     console.log(removeEgg(['egg', 'apple', 'mango', 'egg', 'egg', 'orange','egg']));
+    </script>
+  </body>
+</html>
